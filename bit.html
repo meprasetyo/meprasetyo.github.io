@@ -9,12 +9,25 @@
         setInterval(function(){
             window.location.reload();
         }, 3600000); // 1 jam (3600000ms)
+
+        // Fungsi untuk mengklik tombol "ROLL" otomatis
+        function clickRollButton() {
+            var rollButton = document.querySelector('.free-play-btn');  // Pastikan ini selector yang benar untuk tombol "ROLL"
+            if (rollButton) {
+                rollButton.click();
+            }
+        }
+
+        // Memanggil fungsi untuk klik tombol "ROLL" setelah halaman dimuat
+        window.onload = function() {
+            clickRollButton();
+        };
     </script>
 </head>
 <body>
     <h1>Selamat datang di Freebitco.in Klaim Otomatis</h1>
     <p>Halaman ini akan secara otomatis di-refresh setiap jam untuk mengingatkan kamu klaim Bitcoin.</p>
-    <p>Jangan lupa untuk klik tombol "ROLL" di Freebitco.in setelah halaman di-refresh.</p>
+    <p>Tombol "ROLL" akan diklik otomatis setelah halaman dimuat.</p>
     <p>Halaman akan diperbarui setiap 1 jam.</p>
 </body>
 </html>
