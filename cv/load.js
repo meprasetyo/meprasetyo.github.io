@@ -4,6 +4,9 @@
     $('#rabbit').on('click', function(){
        window.open('https://www.rabbitmq.com/', '_blank');
     });    
+    $('#GO').on('click', function(){
+       window.open('https://go.dev/', '_blank');
+    });    
     $('#docker').on('click', function(){
        window.open('https://www.docker.com/', '_blank');
     });    
@@ -124,6 +127,7 @@
       
         $('#express_img').attr('src','imgIcon/express.jpg');
         $('#py_img').attr('src','imgIcon/py.png');
+        $('#GO_img').attr('src','imgIcon/go.png');
       $('#restapi_img').attr('src','imgIcon/restapi.png');
       $('#laravel_img').attr('src','imgIcon/laravel.png');
       $('#ci_img').attr('src','imgIcon/CI.png');
