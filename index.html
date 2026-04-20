@@ -1,186 +1,108 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
-    <title>Mohamad Eko Prasetyo</title>
-    <meta name="description" content="Nama Saya Mohamad Eko Prasetyo , Atau Biasa Dipanggil Eko . Saya Adalah Analis Sistem ( System Analyst ) Berikut Web Saya" />
-    <meta name="keywords" content="Mohamad Eko Prasetyo , Analyst System , Programmer , Website , Sistem Analis , Eko , Developer Indonesia , Website Indonesia" />
-    <!-- Favicon-->
-    <link rel="icon" href="images/user.jpeg" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamad Eko Prasetyo, S.Kom</title>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-    <!-- Bootstrap Core Css -->
-    <link href="plugins/bootstrap/css/bootstrap.css?v=1.5.1" rel="stylesheet" />
-    <!-- Waves Effect Css -->
-    <link href="plugins/node-waves/waves.css?v=1.5.1" rel="stylesheet" />
-    <!-- Animation Css -->
-    <link href="plugins/animate-css/animate.css?v=1.5.1" rel="stylesheet" />
-    <!-- Custom Css -->
-    <link href="css/style.css?v=1.5.1" rel="stylesheet" />
-    <!-- Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="css/themes/all-themes.css?v=1.5.1" rel="stylesheet" />
-    <link href="css/modif-style.css?v=1.5.1" rel="stylesheet" />
-    <link href="css/flexible.css?v=1.5.1" rel="stylesheet" />
-    <link href="css/scroll/css/style.css?v=1.5.1" rel="stylesheet" />
-    <link href="css/01.css?v=1.5.1" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+            background-color: #4a4343;
+            color: white;
+        }
+
+        .container {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-download {
+            background: #00c6ff;
+            color: white;
+        }
+
+        .btn-download:hover {
+            background: #0094cc;
+        }
+
+        .btn-home {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+
+        .btn-home:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
-<body id="body" class="bd-w">
-    <div class="page-loader-wrapper">
-        <div class="loader">
-            <div class="preloader">
-                <div class="spinner-layer pl-red">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-            </div>
-            <p>Loading System...</p>
-        </div>
-    </div>
-    <div id="div-close" class="overlay"></div>
-    <div class="search-bar">
-        <div class="search-icon">
-            <i class="material-icons">search</i>
-        </div>
-        <input type="text" placeholder="START TYPING..." />
-        <div class="close-search">
-            <i class="material-icons">close</i>
-        </div>
-    </div>
-    <nav id="nav-data" class="navbar" id="navbar" >
-        
-    </nav>
-    <!-- #Top Bar -->
-    <section>
-        <!-- Left Sidebar -->
-        <aside id="leftsidebar" class="sidebar">
-            <!-- Menu -->
-            <div id="leftsidebar" class="menu padding-menu-right" >
-                <ul class="list">
-                    <!--   <li class="header">MAIN NAVIGATION</li> -->
-                    <li id="beranda" class="active-menu-right" >
-                        <a href="#" id="waves-effect-this" >
-                            </font> <i id="id-beranda" class="material-icons icon-menu-active"> &nbsp;home</i>
-                            <span id="span-beranda" style="color: #337ab7; " ><font >Beranda</font></span>
-                        </a>
-                    </li>
-                    <li  id="profile" class="menu-waves-block" >
-                        <a id="waves-effect-this">
-                            </font> <i id="id-profile" class="material-icons"> &nbsp;account_circle</i>
-                            <span id="span-profile">Tentang Saya</span>
-                        </a>
-                    </li>
-                    <li id="sekolah" class="menu-waves-block">
-                        <a id="waves-effect-this">
-                            <i id="id-sekolah" class="material-icons"> &nbsp;assignment</i>
-                            <span id="span-sekolah">Sekolah</span>
-                        </a>
-                    </li>
-                    <li id="pengalaman" class="menu-waves-block">
-                        <a  id="waves-effect-this">
-                            <i id="id-pengalaman" class="material-icons"> &nbsp;work</i>
-                            <span id="span-pengalaman">Pengalaman</span>
-                        </a>
-                    </li>
-                    <li id="kontak" class="menu-waves-block">
-                        <a  id="waves-effect-this">
-                            <i id="id-kontak" class="material-icons"> &nbsp;perm_phone_msg</i>
-                            <span id="span-kontak">Kontak</span>
-                        </a>
-                    </li>
-                    <li id="cv" class="menu-waves-block">
-                        <a href="https://incloudyahope.github.io/" id="waves-effect-this">
-                            <i class="material-icons"> &nbsp;assignment</i>
-                            <span >CV Website </span>
-                        </a>
-                    </li>
-                    <li id="cv_download" class="menu-waves-block">
-                      <a href="https://meprasetyo.github.io/cv/assets/Mohamad%20Eko%20P%20CV%202025_Juni.pdf" id="waves-effect-this" download>
-                        <i id="id-beranda" class="material-icons icon-menu-active" style="color: green"> &nbsp;download</i>
-                        <span id="span-beranda" style="color: green"><font>Download CV PDF</font></span>
-                      </a>
-                    </li>
-                    <li id="family"class="menu-waves-block">
-                        <a href="family" id="waves-effect-this">
-                            <i class="material-icons"> &nbsp;supervisor_account</i>
-                            <span>My-Family </span>
-                        </a>
-                    </li>
-                    <li id="family"class="menu-waves-block">
-                        <a href="project" id="waves-effect-this">
-                            <i class="material-icons"> &nbsp;work</i>
-                            <span>Project </span>
-                        </a>
-                    </li>
-                    <li id="prodev1" class="menu-waves-block">
-                        <a href="https://cuk-prodev.ct.ws/" id="waves-effect-this" target="_blank">
-                            <i class="material-icons" style="color: #4CAF50;"> &nbsp;language</i>
-                            <span>PRODEV 1</span>
-                        </a>
-                    </li>
-                    <li id="prodev2" class="menu-waves-block">
-                        <a href="https://cuk-prodev.github.io/" id="waves-effect-this" target="_blank">
-                            <i class="material-icons" style="color: #2196F3;"> &nbsp;language</i>
-                            <span>PRODEV 2</span>
-                        </a>
-                    </li>
+<body>
 
-                  
-                    <br /><br /><br /><br />
-                    <br /><br /><br /><br />
-                </ul>
-            </div>
-            <!-- Footer -->
-            <div class="legal">
-                <div class="copyright">
-                </div>
-                <div class="version">
-                    <b>Design By Mohamad Eko P, S.Kom </b> 
-                </div>
-            </div>
-        <!-- #Footer -->
-        </aside>
-    <!-- #END# Left Sidebar -->
-    </section>
+<div class="container">
+    <h1>Download File</h1>
+    <p>Silakan pilih aksi yang ingin dilakukan</p>
 
+    <!-- Download PDF -->
+    <a href="https://meprasetyo.github.io/cv/assets/Mohamad%20Eko%20P%20CV%202025_Juni.pdf" class="btn btn-download" download>
+        ⬇️ Download PDF
+    </a>
 
-
-
-<!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------CONTECT INPUT IN HERE---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-
-<section class="content">
-    <div id="content"  class="container-fluid" style="padding-bottom: 70px;">
-       
-    </div>
-    <div class="buttonChatMe">
-        <div> <a href="https://api.whatsapp.com/message/CJSN4FZ55ZP7E1" style="background: #009A01"><i class="fa fa-whatsapp"></i><img src="images/waME.png" class="buttonWAME"></a></div>
-    </div>
-</section>
+    <!-- Ke halaman utama -->
+    <a href="https://cuk-product-development.github.io/" class="btn btn-home">
+        CV Website
+    </a>
+</div>
 
 </body>
-<!-- Jquery Core Js -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap Core Js -->
-<script src="plugins/bootstrap/js/bootstrap.js"></script>
-<!-- Select Plugin Js -->
-<script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
-<!-- Slimscroll Plugin Js -->
-<script src="plugins/jquery-slimscroll/jquery.slimscroll.js?v=1.1.1"></script>
-<!-- Waves Effect Plugin Js -->
-<script src="plugins/node-waves/waves.js"></script>
-<!-- Custom Js -->
-<script src="js/admin.js"></script>
-<!-- Demo Js -->
-<script src="js/demo.js"></script>
-<!-- -----Scroll----->
-<script src="css/scroll/js/scroll.js"></script>
-
-<script src="js/flash.js"></script>
 </html>
