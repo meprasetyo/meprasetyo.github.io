@@ -1,107 +1,144 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamad Eko Prasetyo, S.Kom</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download File</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
 
-        body {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
-            background-color: #4a4343;
-            color: white;
-        }
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: #e2e8f0;
+}
 
-        .container {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(12px);
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            width: 90%;
-            max-width: 400px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
+/* glow background */
+body::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #22c55e;
+    filter: blur(140px);
+    opacity: 0.2;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-        h1 {
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
+/* card */
+.card {
+    position: relative;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 45px 35px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
 
-        p {
-            margin-bottom: 30px;
-            font-size: 14px;
-            opacity: 0.8;
-        }
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
 
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+p {
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 30px;
+}
 
-        .btn-download {
-            background: #00c6ff;
-            color: white;
-        }
+/* buttons */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 12px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
-        .btn-download:hover {
-            background: #0094cc;
-        }
+/* download button */
+.btn-download {
+    background: linear-gradient(135deg, #22c55e, #4ade80);
+    color: #022c22;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(34,197,94,0.3);
+}
 
-        .btn-home {
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.3);
-            color: white;
-        }
+.btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(34,197,94,0.5);
+}
 
-        .btn-home:hover {
-            background: rgba(255,255,255,0.1);
-        }
+/* home button */
+.btn-home {
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #cbd5f5;
+    background: transparent;
+}
 
-        @media (max-width: 500px) {
-            .container {
-                padding: 25px;
-            }
-        }
-    </style>
+.btn-home:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* subtle animation */
+.card {
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:500px){
+    .card{
+        padding:30px 20px;
+    }
+}
+</style>
 </head>
 <body>
 
-<div class="container">
+<div class="card">
     <h1>Download File</h1>
-    <p>Silakan pilih aksi yang ingin dilakukan</p>
+    <p>Pilih aksi yang ingin kamu lakukan</p>
 
-    <!-- Download PDF -->
+    <!-- Download -->
     <a href="https://meprasetyo.github.io/cv/assets/Mohamad%20Eko%20P%20CV%202025_Juni.pdf" class="btn btn-download" download>
-        ⬇️ Download PDF
+        ⬇ Download PDF
     </a>
 
-    <!-- Ke halaman utama -->
+    <!-- Home -->
     <a href="https://cuk-product-development.github.io/" class="btn btn-home">
-        CV Website
+        ⬅ Kembali ke Home
     </a>
+
 </div>
 
 </body>
